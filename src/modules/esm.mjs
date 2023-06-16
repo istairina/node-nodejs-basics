@@ -13,9 +13,9 @@ const req = createRequire(import.meta.url);
 export let unknownObject;
 
 if (random > 0.5) {
-  unknownObject = req("./files/a.json");
+  unknownObject = req(path.join(__dirname, "files", "a.json"));
 } else {
-  unknownObject = req("./files/b.json");
+  unknownObject = req(path.join(__dirname, "files", "b.json"));
 }
 
 console.log(`Release ${release()}`);

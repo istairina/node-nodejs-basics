@@ -4,7 +4,7 @@ const parseArgs = () => {
 
   let i = 2;
   while (i < argv.length) {
-    res.push(`${argv[i]} is ${argv[++i]}`);
+    res.push(`${argv[i].slice(2)} is ${argv[++i]}`);
     i++;
   }
   console.log(res.join(", "));
